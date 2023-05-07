@@ -1,0 +1,27 @@
+.main{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 90px 0 90px 0;
+    background-color: aqua;
+  }
+  
+  .input{
+    display: block;
+    justify-content: center;
+    height: 15px;
+    width: 35%;
+    box-shadow: 1px 1px 1px 1px rgb(55, 235, 139);
+    padding: 7px;
+    
+   
+    background-color: white;
+  } 
+  body{
+    background-color: aqua;
+  }
+
+  
+
+  
+ 
