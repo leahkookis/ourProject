@@ -9,4 +9,7 @@
   height: 100vh;
   width: 100%;
 }
+#root >*{
+  color: rgb(0, 0, 0);
+}
 

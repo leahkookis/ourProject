@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const navigate = useNavigate();
   let navigateToUserHomePage = ()=>{
-    navigate('/userHomePage');
+    navigate('/homePage');
   }
   let [userName, setUserName] = useState("");
   let [password, setPassword] = useState("");
