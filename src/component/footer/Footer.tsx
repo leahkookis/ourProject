@@ -1,8 +1,11 @@
 import './Footer.css'
 
-function Footer(){
+function Footer() {
     return (
-        <div className='footer'>Footer</div>
+        <div className='footer'>
+            <div className="signature">
+                <p>Created by Lidor, Eli & Lea</p>
+            </div></div>
     )
 }
 export default Footer;

@@ -21,12 +21,7 @@ function Register() {
         alert("passwords don't match");
         return;
       }
-      await axios.post("http://localhost:8080/users", {
-        userName,
-        password,
-        gender,
-        age,
-      });
+      await axios.post("http://localhost:8080/users", { userName, password, gender, age });
       navigate("/login");
     } catch (e: any) {
       if (e?.response?.data?.errorMessage) {
@@ -42,62 +37,38 @@ function Register() {
       <form>
         <div className="form-group">
           <label htmlFor="username"></label>
-          <input
-            type="text"
-            id="username"
-            placeholder="user name"
-            onChange={(event) => setUserName(event.target.value)}
-          />
+          <input type="text" id="username" placeholder="user name" onChange={(event) => setUserName(event.target.value)} />
           <i className="fa fa-envelope"></i>
         </div>
+
         <div className="form-group">
           <label htmlFor="password"></label>
-          <input
-            type="password"
-            id="password"
-            placeholder="password"
-            onChange={(event) => setPassword(event.target.value)}
-          />
+          <input type="password" id="password" placeholder="password" onChange={(event) => setPassword(event.target.value)} />
           <i className="fa fa-lock"></i>
         </div>
+
         <div className="form-group">
           <label htmlFor="password"></label>
-          <input
-            type="verify-password"
-            id="verify-password"
-            placeholder="verify-password"
-            onChange={(event) => setVerifyPassword(event.target.value)}
-          />
+          <input type="verify-password" id="verify-password" placeholder="verify-password" onChange={(event) => setVerifyPassword(event.target.value)} />
           <i className="fa fa-lock"></i>
         </div>
+
         <div className="form-group">
           <label htmlFor="age"></label>
-          <input
-            type="text"
-            id="age"
-            value={age}
-            placeholder="age"
-            onChange={(event) => setAge(event.target.value)}
-          />
+          <input type="text" id="age" value={age} placeholder="age" onChange={(event) => setAge(event.target.value)} />
           <i className="fa fa-phone"></i>
         </div>
+
         <div className="form">
           <label htmlFor="gender"></label>
           <div className="gender">
-          <select 
-       value={gender} 
-       onChange={(e) => setGender(e.target.value)}>
-         {options.map((value) => (
-          <option value={value} key={value}>
-            {value}
-          </option>
-         ))}
-      </select>
+            <select
+              value={gender} onChange={(e) => setGender(e.target.value)}> {options.map((value) => (<option value={value} key={value}>{value} </option>))}
+            </select>
           </div>
         </div>
-        <button type="button" className="submit-btn" onClick={register}>
-          SUBMIT
-        </button>
+
+        <button type="button" className="submit-btn" onClick={register}> SUBMIT </button>
       </form>
     </div>
   );
