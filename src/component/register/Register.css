@@ -1,0 +1,35 @@
+.Register{
+    top:-30px;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: space-around;
+    text-align: center;
+    box-decoration-break: clone;-webkit-box-decoration-break: clone;box-shadow: 4px 5px 5px 0 #3dfa95, -5px -5px 5px 0 rgb(83, 244, 118), 5px 5px 15px 0 #ff0 ,width(fit-content);
+}
+.Register .form-group ,
+.Register .form-group > input{
+    margin: 5px auto;
+    padding: 5px;
+    font-size: 25px;
+    margin-left: 20px;
+}
+.Register .form-group > input{
+    margin-left: 50px auto;
+    align-items: center;
+}
+@media (max-width: 930px) {
+   
+ 
+    .Register .form-group ,
+.Register .form-group > input{
+      display: flex;
+      width:fit-content;
+      height: fit-content;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+    }
+   
+  }

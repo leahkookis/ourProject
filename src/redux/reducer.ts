@@ -7,8 +7,8 @@ export function reduce(oldAppState: AppState = new AppState(), action: Action): 
     const newAppState = { ...oldAppState };
 
     switch (action.type) {
-        case ActionType.GetCoupons:
-            newAppState.coupons = action.payload.response;
+        case ActionType.saveUserName:
+            newAppState.userName = action.payload.userName;
             break;
         case ActionType.LoginData:
             newAppState.loginData = action.payload.loginData;
