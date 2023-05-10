@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "../../redux/app-state";
 import Message from "./Message";
+import { Link } from "react-router-dom";
 
 function MessageList() {
   
@@ -20,11 +21,9 @@ function MessageList() {
       pageNumber--;
       setPageNumber(pageNumber);
     }
-  
     useEffect(() => {
       getAllMessages();
     }, []);
-  
     async function getAllMessages() {
       try {
         let url = `http://localhost:8080/messages`;
@@ -46,10 +45,11 @@ function MessageList() {
   
       let [context,setContext]=useState("");
       axios.defaults.headers.common["Authorization"] = token;
-      
+
       async function updateMessageList() {
         try {
           await axios.post("http://localhost:8080/messages", { context });
+          window.location.reload()
         } catch (e: any) {
           if (e.response?.data?.errorMessage) {
             alert(e.response.data.errorMessage);
@@ -58,7 +58,7 @@ function MessageList() {
           }
         }
     }
-    
+   
     return (
       
       <div className="message-list">
