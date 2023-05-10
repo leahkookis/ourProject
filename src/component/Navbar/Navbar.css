@@ -1,4 +1,4 @@
-header>.navbar{
+.navbar{
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -7,7 +7,7 @@ header>.navbar{
 .navbar h1,p,a{
     text-decoration: none;
     color: rgb(0, 0, 0);
-    margin: 1rem ;
+    margin:0 1rem ;
 }
 .navbar li{
     list-style: none;
@@ -34,5 +34,9 @@ header>.navbar{
     font-size: x-large;
     font-weight: 500;
     justify-content: center;
-    margin-left: 8rem;
+    margin-left: 11rem;
+}
+.navbar .o{
+    font-family: 'Monoton', cursive;
+
 }

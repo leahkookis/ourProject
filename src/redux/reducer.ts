@@ -16,6 +16,11 @@ export function reduce(oldAppState: AppState = new AppState(), action: Action): 
         case ActionType.SendSearchText:
             newAppState.sendSearchText = action.payload.subText;
             break;
+        case ActionType.saveMessages:
+            newAppState.messages = action.payload.messageList;
+            break; 
+        case ActionType.saveToken:
+            newAppState.token = action.payload.token;      
     }
 
     return newAppState;

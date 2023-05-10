@@ -29,9 +29,10 @@ function Login() {
       let decodeToken: any = jwt_decode(token);
       let strLoginData: string = decodeToken.sub;
       let loginData = JSON.parse(strLoginData);
-      axios.defaults.headers.common["Authorization"] = "Bearer" + token;
+      axios.defaults.headers.common["Authorization"] = token;
       dispatch({ type: ActionType.LoginData, payload: { loginData } });
       dispatch({ type: ActionType.saveUserName, payload: { userName } });
+      dispatch({ type: ActionType.saveToken, payload: { token } });
       navigateToUserHomePage();
     } catch (e: any) {
       console.error(e);

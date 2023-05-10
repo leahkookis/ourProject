@@ -7,7 +7,7 @@ function Navbar() {
       <Link to={"/"}> <div className="logo"> <h1>OP</h1> </div> </Link>
 
       <div className="title">
-        <Link to={"/homePage"}> <h2>ourProject</h2> </Link>
+        <Link to={"/homePage"}> <h2><span className="o">o</span>ur<span className="o">P</span>roject</h2> </Link>
       </div>
 
       <ul className="nav-links">

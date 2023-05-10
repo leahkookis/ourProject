@@ -1,5 +1,7 @@
-export enum ActionType{
+export enum ActionType {
     saveUserName,
     LoginData,
-    SendSearchText
+    SendSearchText,
+    saveMessages,
+    saveToken
 }

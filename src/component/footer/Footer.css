@@ -1,11 +1,16 @@
-.Footer>.signature {
-    display: block;
-    text-align: center;
-    width: 375px;
-}
+
 
 .signature p {
     color: black;
     font-family: 'Brush Script MT', cursive;
     font-size: 20px;
+}
+.footer{
+    margin-top: auto;
+    background: black;
+    color: azure;
+}
+.footer p{
+    color: azure;
+    font-size: x-large;
 }
