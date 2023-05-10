@@ -19,7 +19,8 @@ function HomePage(){
              <p>Please login or register</p>}
             </h1> 
             <div className="messages">
-                {messageList?<button onClick={navigateToMessages}>Messages</button>:"no messages"}
+            <button onClick={navigateToMessages}>Messages</button>
+                {/* {messageList?<button onClick={navigateToMessages}>Messages</button>:"no messages"} */}
             </div>
             </div>
     )
